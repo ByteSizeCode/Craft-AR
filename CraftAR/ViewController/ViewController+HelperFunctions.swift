@@ -88,6 +88,7 @@ extension ViewController {
         cubeNode.position = cubePosition
         cubeNode.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(geometry: cube, options: nil))
         cubeNode.name = "block"
+        cubeNode.physicsBody?.angularVelocityFactor = SCNVector3(0, 0, 0) //Disable blocks from turning on impact
         
         objects.append(cubeNode)
         sceneView.scene.rootNode.addChildNode(cubeNode)
